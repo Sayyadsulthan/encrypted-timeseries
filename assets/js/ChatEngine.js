@@ -8,13 +8,13 @@ class ChatEngine {
   handleConnect() {
     let self = this;
     this.socket.on("connect", () => {
-      console.log("working");
+    //   console.log("working");
       let ul = document.getElementById("show-data");
       let dataContainer = document.getElementsByClassName("data-container");
 
       let heading = document.createElement("h1");
       if (ul.innerHTML.length === 0) {
-          console.log("zero")
+        //   console.log("zero")
         heading.innerHTML = "Please wait while fetching the data...";
         dataContainer[0].append(heading);
       }
