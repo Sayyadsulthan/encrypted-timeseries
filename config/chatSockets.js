@@ -6,7 +6,7 @@ require("dotenv").config();
 module.exports.chatSockets = function (socketServer) {
   let io = require("socket.io")(socketServer, {
     cors: {
-      origin: `http://localhost:${process.env.PORT||8000}`,
+      origin: `${process.env.HOST_URL}:${process.env.PORT||8000}`,
       methods: ["GET", "POST"],
       //   allowedHeaders: ["my-custom-header"],
       credentials: true,

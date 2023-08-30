@@ -1,6 +1,7 @@
 class ChatEngine {
   constructor() {
-    this.socket = io.connect("http://localhost:5000");
+    // this.socket = io.connect("http://localhost:5000");
+    this.socket = io.connect("https://encrypted-time-series.onrender.com:5000");
 
     this.handleConnect();
   }
