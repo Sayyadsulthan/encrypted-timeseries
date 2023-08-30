@@ -1,5 +1,6 @@
 const express = require("express");
-const port = 8000;
+require("dotenv").config();
+const port = process.env.PORT;
 const app = express();
 const ejs = require("ejs");
 const db = require("./config/db");
@@ -7,7 +8,7 @@ const db = require("./config/db");
 // setup the chat server to used with socket.io
 const chatServer = require("http").Server(app);
 const chatSockets = require("./config/chatSockets").chatSockets(chatServer);
-chatServer.listen(5000);
+chatServer.listen(process.env.CHAT_PORT);
 console.log("socket is listening on port : 5000");
 
 app.use(express.static("./assets"));

@@ -23,7 +23,8 @@ class ChatEngine {
         // get the ul from dom
         // creating the li
         // if(data.)
-        dataContainer[0].removeChild(heading);
+        // dataContainer[0].remove(heading);
+        heading.innerHTML=''
         let li = document.createElement("li");
 
         let nameContainer = document.createElement("p");

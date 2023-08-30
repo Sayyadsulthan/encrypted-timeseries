@@ -1,11 +1,12 @@
 const crypto = require("crypto");
 const userData = require("../data.json");
 const DataStore = require("../models/dataStore");
+require("dotenv").config();
 // socket
 module.exports.chatSockets = function (socketServer) {
   let io = require("socket.io")(socketServer, {
     cors: {
-      origin: "http://localhost:8000",
+      origin: `http://localhost:${process.env.PORT}`,
       methods: ["GET", "POST"],
       //   allowedHeaders: ["my-custom-header"],
       credentials: true,
@@ -21,7 +22,7 @@ module.exports.chatSockets = function (socketServer) {
 
     // user.secret_key = secret_key;
     // ALGORITHM AND PASS KEY
-    const algorithm = "aes-256-ctr";
+    const algorithm = process.env.algorithm;
     const passkey = crypto.randomBytes(16);
 
     setInterval(() => {
@@ -58,7 +59,7 @@ module.exports.chatSockets = function (socketServer) {
 
           // DEFINING THE SECRET KEY
           const secretKey = crypto
-            .createHash("sha256")
+            .createHash(process.env.hash_algorithm)
             .update(JSON.stringify(item))
             .digest("hex");
           // console.log("secret key:", secretKey);
