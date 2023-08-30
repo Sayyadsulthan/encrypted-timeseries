@@ -12,7 +12,7 @@ app.use(cors());
 const chatServer = require("http").Server(app);
 const chatSockets = require("./config/chatSockets").chatSockets(chatServer);
 chatServer.listen(process.env.CHAT_PORT);
-console.log(`socket is listening on port : ${process.env.CHAT_PORT}`);
+console.log(`socket is listening on port : ${process.env.CHAT_PORT||443}`);
 
 app.use(express.static("./assets"));
 app.set("view engine", "ejs");
