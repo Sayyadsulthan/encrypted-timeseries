@@ -35,24 +35,30 @@ class ChatEngine {
         let nameContainer = document.createElement("p");
         let nameTag = document.createElement("span");
         nameTag.innerHTML = "Name : ";
+        nameTag.className="name-tag"
         let name = document.createElement("span");
         name.innerHTML = data.name;
+        name.className="data-tag"
         nameContainer.append(nameTag);
         nameContainer.append(name);
 
         let originContainer = document.createElement("p");
         let originTag = document.createElement("span");
         originTag.innerHTML = "Origin : ";
+        originTag.className="name-tag"
         let origin = document.createElement("span");
         origin.innerHTML = data.origin;
+        origin.className="data-tag"
         originContainer.append(originTag);
         originContainer.append(origin);
 
         let destinationContainer = document.createElement("p");
         let destinationTag = document.createElement("span");
         destinationTag.innerText = "Destination : ";
+        destinationTag.className="name-tag"
         let destination = document.createElement("span");
         destination.innerHTML = data.destination;
+        destination.className="data-tag"
 
         destinationContainer.append(destinationTag);
         destinationContainer.append(destination);
