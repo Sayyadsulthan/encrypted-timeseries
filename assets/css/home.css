@@ -47,13 +47,20 @@ body{
 padding-left: 10px;
 min-height: 90vh;
 }
+
+.data-container h1{
+    color: black;
+    height: max-content;
+}
+
+
 #show-data li{
     position:inherit;
     width: 50%;
     background-color: rgb(197, 175, 148);
     height: 50%;
     margin: auto;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border-radius: 10px;
     padding: 5px;
     box-shadow: #ccdcdc 2px 2px 4px 2px;
@@ -61,7 +68,7 @@ min-height: 90vh;
 }
 .name-tag{
     font-weight: bold;
-    font-size: large;
+    font-size: larger;
     color: black;
 }
 .data-tag{
