@@ -1,7 +1,7 @@
 # encrypted-timeseries
 Syook encrypted-timeseries test
 
-in hosting this socket.io having issue that will giving polling error anot not connected but in our system this works
+in hosting this socket.io having issue that will giving polling error and not connected but in  system this will works
 
 #for installaion just download the file of clone and run npm i
 #for run the project use npm start
