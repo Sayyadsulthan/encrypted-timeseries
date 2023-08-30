@@ -1,7 +1,7 @@
 class ChatEngine {
   constructor() {
     // this.socket = io.connect("http://localhost:5000");
-    this.socket = io.connect("https://encrypted-time-series.onrender.com:5000");
+    this.socket = io.connect("https://100.20.92.101:443");
 
     this.handleConnect();
   }
@@ -9,7 +9,7 @@ class ChatEngine {
   handleConnect() {
     let self = this;
     this.socket.on("connect", () => {
-    //   console.log("working");
+      //   console.log("working");
       let ul = document.getElementById("show-data");
       let dataContainer = document.getElementsByClassName("data-container");
 
@@ -25,7 +25,7 @@ class ChatEngine {
         // creating the li
         // if(data.)
         // dataContainer[0].remove(heading);
-        heading.innerHTML=''
+        heading.innerHTML = "";
         let li = document.createElement("li");
 
         let nameContainer = document.createElement("p");
